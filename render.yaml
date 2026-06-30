@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: emc-racktrack
+    env: node
+    plan: starter
+    buildCommand: ""
+    startCommand: "npm start"
+    envVars:
+      - key: DATA_DIR
+        value: /var/data
+    disk:
+      name: racktrack-data
+      mountPath: /var/data
+      sizeGB: 1
